@@ -1,8 +1,8 @@
 # Python
 
-> Reporsitory for Practicing python
+> Reporsitory for Practicing python  
 > Name: Xinhai Zou  
-> Github: SeanMWX
+> Github: SeanMWX  
 > <font color="red">Please DO NOT COPY ANYTHING WITHOUT PERMISSIONS!</font>
 
 ## Installation 
