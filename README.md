@@ -9,7 +9,7 @@
 
 Just use the following command line:
 ```sh
-git clone https://github.com/SeanMWX/BDAP.git
+git clone https://github.com/SeanMWX/Python.git
 ```
 
 ## Directory & file structure
