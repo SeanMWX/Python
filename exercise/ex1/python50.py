@@ -1,6 +1,9 @@
 # 50+ Basic Python Code Examples
 # https://blog.devgenius.io/50-basic-python-code-examples-e1a261c006f5
 
+# import
+import math
+
 # for coloring Q1, Q2 ... etc.
 class bcolors:
     HEADER = '\033[95m'
@@ -23,7 +26,14 @@ def print_color(pre, post, word):
 
     print(pre + word + post)
 
-
+# 20: prime
+def is_prime(num):
+    if num == 1 or num == 2:
+        return False
+    for i in range(2, int(math.sqrt(num))+1):
+        if num % i == 0:
+            return False
+    return True
 
 # 1. How to print "Hello World" on Python?
 print_color('H', 'E', "Q1")
@@ -101,3 +111,102 @@ for name, values in bmi_dict.items():
         print('Overweight')
     elif(bmi >= 30):
         print('Obese')
+
+# 11. How to show if the person whose age is entered can get a driver's license on Python?
+print_color('H', 'E', 'Q11')
+driver_license_dict = {'coco':16, 'kiki':18, 'kuku':22}
+for name, age in driver_license_dict.items():
+    print(name, 'is', end=' ')
+    if age >= 18:
+        print('allowed to get a driver\'s license')
+    elif age < 18:
+        print('not allowed to get a driver\'s license')
+
+# 12. How to List Numbers 1-100 on the Screen on Python?
+print_color('H', 'E', 'Q12')
+for i in range(1,101):
+    print(i, end=', ')
+print('')
+
+# 13. How to List Even Numbers 1-100 on Python?
+print_color('H', 'E', 'Q13')
+for i in range(1,101):
+    if i % 2 == 0:
+        print(i, end=', ')
+print('')
+
+# 14. How to List Odd Numbers 1-100 on Python?
+print_color('H', 'E', 'Q14')
+for i in range(1,101):
+    if i % 2 != 0:
+        print(i, end=', ')
+print('')
+
+# 15. How to find numbers between 1 and 100 that are divided by 3 and 5 on Python?
+print_color('H', 'E', 'Q15')
+for i in range(1,101):
+    if i % 3 == 0 or i % 5 ==0:
+        print(i, end=', ')
+print('')
+
+# 16. How to list Numbers from 1 to User-Entered Number on Python?
+print_color('H', 'E', 'Q16')
+input_num = 10
+for i in range(1, input_num+1):
+    print(i, end=', ')
+print('')
+
+# 17. How to find the Area and Perimeter of a Rectangle With its sides on Python?
+print_color('H', 'E', 'Q17')
+rec_length = 10
+rec_width = 5
+print('Area of Rectangle: ', rec_length * rec_width)
+print('Perimeter of Rectangle: ', (rec_length + rec_width) * 2)
+
+# 18. How to print the letters of the entered text one under the other on Python?
+print_color('H', 'E', 'Q18')
+input_letter = 'abcdef'
+for c in input_letter:
+    print(c, end=' ,')
+print('')
+
+# 19. How to show the sum of numbers between two numbers the user has entered on Python?
+print_color('H', 'E', 'Q19')
+num1 = 1
+num2 = 10
+sum_num = 0
+for i in range(num1, num2+1):
+    sum_num += i
+print('Sum from ', num1, ' and ', num2, ' is ', sum_num)
+print('Sum by sum/1 is ', sum(range(num1, num2+1)))
+
+# 20. For example, let's ask the user about their choice of cinema or theater. You have to pay 10 dollars to watch movies and 5 dollars for theater. We thick that students get 50% discount. If the student is discounted; if he is not a student, let's write a document that calcualtes the non=discounted amount and prints it.
+print_color('H', 'E', 'Q20')
+per_dict = {'coco':('c',1), 'kiki':('c',0), 'kuku':('t',1)}   # 0: not student, 1: student; 'c': cinema, 't': theater
+stu_discount = 0.5
+c_price = 10.0
+t_price = 5.0
+for name, values in per_dict.items():
+    if values[0] == 'c':
+        place = 'cinema'
+        if values[1] == 1:
+            price = c_price * stu_discount
+        elif values[1] == 0:
+            price = c_price
+    elif values[0] == 't':
+        place = 'theater'
+        if values[1] == 1:
+            price = t_price * stu_discount
+        elif values[1] == 0:
+            price = t_price
+    print('{0} chose to go to {1}, and he/she needs to pay {2}'.format(name, place, price))
+
+# 21. How to find out if the entered number is Prime or Not on Python?
+print_color('H', 'E', 'Q21')
+for n in range(1,101):
+    if(is_prime(n)):
+        print('{0} is Prime'.format(n))
+    # else:
+        # print('{0} is not Prime'.format(n))
+
+# 22. 
