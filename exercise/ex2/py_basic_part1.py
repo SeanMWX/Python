@@ -5,6 +5,10 @@
 import sys
 from datetime import datetime
 import math
+# 12. calendar
+import calendar
+# 14
+from datetime import date
 
 # for coloring
 class bcolors:
@@ -90,4 +94,113 @@ print_color('H', 'E', 'Q10')
 num = 5
 print('Expected Result: {0}'.format(num*3+num*10*2+num*100))
 
-# 11. 
+# 11. Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s)
+print_color('H', 'E', 'Q11')
+num_list = [-10, -5, 0, 5]
+abs_list = []
+for num in num_list:
+    if num < 0:
+        abs_list.append(num * -1)
+        continue
+    abs_list.append(num)
+print('Original: {0}'.format(num_list))
+print('Absolute: {0}'.format(abs_list))
+
+# *Calendar
+# *12. Write a Python program to print the calendar of a given month and year.
+print_color('H', 'E', 'Q12')
+y = 2022
+m = 1
+print(calendar.month(y, m))
+
+# *multi print
+# *13. Write a Python program to print the following 'here document'
+print_color('H', 'E', 'Q13')
+print('''
+a string that you "don't" have to escape
+This
+is a ....... multi-line
+heredoc string --------> example
+'''
+)
+
+# 14. Write a Python program to calculate number of days between two dates.
+print_color('H', 'E', 'Q14')
+date1 = date(2014,7,2)
+date2 = date(2014,7,11)
+print('The days difference between {0} and {1} is {2}'.format(date1, date2, (date2-date1).days))
+
+# 15. Write a Python program to get the volume of a sphere with radius 6.
+print_color('H', 'E', 'Q15')
+r = 6
+print('The volume of sphere with radius of {0} is {1}'.format(r, 4/3*math.pi*r**3))
+
+# 16. Write a Python program to get the difference between a given number and 17, if the number is greater than 17 return double the absolute difference.
+print_color('H', 'E', 'Q16')
+num_list = [-1, 1, 18, 20]
+for num in num_list:
+    print('For \'{0}\', the difference is '.format(num), end='')
+    if num > 17:
+        print((num-17)*2, '[double]')
+    else:
+        print(abs(17-num))
+
+# 17. Write a Python program to test whether a number is within 100 of 1000 or 2000.
+print_color('H', 'E', 'Q17')
+num_list = [100,901,1001,1990,2022,2200]
+for num in num_list:
+    print('For \'{0}\''.format(num), end=' ')
+    if abs(1000-num) <= 100 or abs(2000-num) <= 100:
+        print('is within 100 of 1000 or 2000')
+    else:
+        print('is not wihtin 100 of 1000 or 2000')
+
+# 18. Write a Python program to calculate the sum of three given numbers, if the values are equal then return three times of their sum.
+print_color('H', 'E', 'Q18')
+num_list1 = [1,1,1]
+num_list2 = [1,2,1]
+num_lists = [num_list1, num_list2]
+for lst in num_lists:
+    temp = None
+    is_same = True
+    for num in lst:
+        if temp is None:
+            temp = num
+            continue
+        if temp != num:
+            is_same = False
+            break
+    if is_same:
+        print('For {0}, the 3 times sum is: {1}'.format(lst, sum(lst)*3))
+    else:
+        print('For {0}, the sum is: {1}'.format(lst, sum(lst)))
+
+# 19. Write a Python program to get a new string from a given string where "Is" has been added to the front. If the given string already begins with "Is" then return the string unchanged.
+print_color('H', 'E', 'Q19')
+str_list = ['Coco is cool', 'Is Kiki is cool', 'Is kuku is cool']
+new_str_list = []
+for _str in str_list:
+    if _str.split(' ')[0] != 'Is':
+        _str = 'Is ' + _str
+    new_str_list.append(_str)
+print('Original: ', str_list)
+print('Add \'Is\': ', new_str_list)
+
+# 20. Write a Python program to get a string which is n (non-negative integer) copies of a given string.
+print_color('H', 'E', 'Q20')
+n = 5
+str1 = 'Hello world!'
+for i in range(n):
+    print(str1)
+
+# 21. Write a Python program to find whether a given number (accept from the user) is even or odd, print out an appropriate message to the user.
+print_color('H', 'E', 'Q21')
+num_list = [1,2,3,4,5]
+for num in num_list:
+    print('For {0}, it is '.format(num), end='')
+    if num % 2 != 0:
+        print('Odd number.')
+    elif num % 2 == 0:
+        print('Even number.')
+
+# 22. 
