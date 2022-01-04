@@ -246,4 +246,64 @@ for num in num_list:
     else:
         print('False')
 
-# 26. 
+# 26. Write a Python program to create a histogram from a given list of integers.
+print_color('H', 'E', 'Q26')
+num_list = [1,5,7,10]
+for num in num_list:
+    for i in range(num):
+        print('*', end='')
+    print('')
+
+# 27. Write a Python program to concatenate all elements in a list into a string and return it.
+print_color('H', 'E', 'Q27')
+conc_list = [1,'s','coco','2','a','kiki']
+conc_str = ''
+for elem in conc_list:
+    conc_str += str(elem)
+print('The concat string is {0}'.format(conc_str))
+
+# 28. Write a Python program to print all even numbers from a given numbers list in the same order and stop the printing if any numbers that come after 237 in the sequence.
+print_color('H', 'E', 'Q28')
+numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,958,743, 527]
+for num in numbers:
+    if num == 237:
+        print(num, end=',')
+        break
+    if num % 2 == 0:
+        print(num, end=',')
+print('')
+
+# 29. Write a Python program to print out a set containing all the colors from color_list_1 which are not present in color_list_2.
+print_color('H', 'E', 'Q29')
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+color_selected = set([])
+#for color in color_list_1:
+#    if color not in color_list_2:
+#        color_selected.add(color)
+color_selected = color_list_1.difference(color_list_2)
+print(color_selected)
+
+# 30. Write a Python program that will accept the base and height of a triangle and compute the area.
+print_color('H', 'E', 'Q30')
+base = 3
+height = 4
+print('Area of triangle: {0}'.format(base*height*1/2))
+
+# 31. Write a Python program to compute the greatest common divisor (GCD) of two positive integers.
+print_color('H', 'E', 'Q31')
+nums_list = [(12,17), (4,6), (336,360)]
+def gcd(big, small):
+    tmp = big - small
+    if tmp == 0:
+        return big
+    if tmp > small:
+        return gcd(tmp, small)
+    else:
+        return gcd(small, tmp)
+
+
+for nums in nums_list:
+    print('For {0} and {1}, gcd is {2}'.format(nums[0], nums[1], gcd(nums[1],nums[0])))
+
+# 32. 
