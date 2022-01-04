@@ -203,4 +203,47 @@ for num in num_list:
     elif num % 2 == 0:
         print('Even number.')
 
-# 22. 
+# 22. Write a Python program to count the number 4 in a given list.
+print_color('H', 'E', 'Q22')
+num_list = [1,2,4,5,54,4,4,4,4]
+count = 0
+for num in num_list:
+    if num == 4:
+        count += 1
+print('The number 4 appears {0} times'.format(count))
+
+# 23. Write a Python program to get the n (non-negative integer) copies of the first 2 characters of a given string. Return the n copies of the whole string if the length is less than 2.
+print_color('H', 'E', 'Q23')
+str_lst = ['a', 'abc']
+n = 3
+for _str in str_lst:
+    if len(_str) < 2:
+        for i in range(n):
+            print(_str)
+    else:
+        for i in range(n):
+            print(_str[0]+_str[1])
+
+# 24. Write a Python program to test whether a passed letter is a vowel or not.
+print_color('H', 'E', 'Q24')
+c_list = ['a','b','c','e','o','z']
+for c in c_list:
+    print('{0}'.format(c), end=' ')
+    # best solution: if c in 'aeiou'
+    if c in ['a', 'e', 'i', 'o', 'u']:
+        print('is Vowel')
+    else:
+        print('is not Vowel')
+
+# 25. Write a Python program to check whether a specified value is contained in a group of values.
+print_color('H', 'E', 'Q25')
+num_list = [-1,1,3,5,7]
+check_list = [1,3,7]
+for num in num_list:
+    print('{0} -> {1}:'.format(num, check_list), end=' ')
+    if num in check_list:
+        print('True')
+    else:
+        print('False')
+
+# 26. 
