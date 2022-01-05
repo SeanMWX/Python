@@ -306,4 +306,58 @@ def gcd(big, small):
 for nums in nums_list:
     print('For {0} and {1}, gcd is {2}'.format(nums[0], nums[1], gcd(nums[1],nums[0])))
 
-# 32. 
+# 32. Write a Python program to get the least common multiple (LCM) of two positive integers.
+print_color('H', 'E', 'Q32')
+nums_list = [(12,17), (4,6), (15,17)]
+def lcm(big, small):
+    return big*small/gcd(big,small)
+
+
+for nums in nums_list:
+    print('FOr {0} and {1}, lcd is {2}'.format(nums[0], nums[1], lcm(nums[1], nums[0])))
+
+# 33. Write a Python program to sum of three given integers. However, if two values are equal sum will be zero.
+print_color('H', 'E', 'Q33')
+nums_list = [[1,2,3],[3,4,5],[5,5,6]]
+for nums in nums_list:
+    print('For list {0}, '.format(nums), end='')
+    _sum = 0
+    if len(nums) != len(set(nums)):
+        _sum = 0
+    else:
+        for num in nums:
+            _sum += num
+    print('the sum is {0}'.format(_sum))
+
+# 34. Write a Python program to sum of two given integers. However, if the sum is between 15 to 20 it will return 20.
+print_color('H', 'E', 'Q34')
+nums_list = [[1,2], [3,4], [5,6], [5,10]]
+for nums in nums_list:
+    print('For list {0}, '.format(nums), end='')
+    if sum(nums) >= 15 and sum(nums) <= 20:
+        print('the sum is {0}'.format(20))
+    else:
+        print('the sum is {0}'.format(sum(nums)))
+
+# 35. Write a Python program that will return true if the two given integer values are equal or their sum or difference is 5.
+print_color('H', 'E', 'Q35')
+nums_list = [[2,2], [3,4], [5,5], [5,10]]
+for nums in nums_list:
+    print('For list {0}, '.format(nums), end='')
+    if nums[0] == nums[1] or abs(nums[0]-nums[1]) == 5:
+        print ('is True')
+    else:
+        print('is False')
+
+# 36. Write a Python program to add two objects if both objects are an integer type.
+print_color('H', 'E', 'Q36')
+nums_list = [[2,2], [3.1,4], [5,5.3], [5,10]]
+for nums in nums_list:
+    print('For list {0}, '.format(nums), end='')
+    if isinstance(nums[0],int) and isinstance(nums[1], int):
+        print('the sum is {0}'.format(sum(nums)))
+    else:
+        print('they are not both integer')
+
+# 37.
+
