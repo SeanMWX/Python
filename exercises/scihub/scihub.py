@@ -4,10 +4,12 @@ import requests as req
 from bs4 import BeautifulSoup as bsoup
 import re
 import urllib.request
+import random
 
 def download_file(url):
     dir_path = 'download/'
-    file_name = dir_path + url.split('/')[-1]
+    rand = random.randint(1,100) + random.randint(1,100)*random.randint(1,100)
+    file_name = dir_path + str(rand) + '_' + url.split('/')[-1]
     try:
         u = urllib.request.urlopen(url)
     except urllib.error.HTTPError:
@@ -30,9 +32,13 @@ def url_download(url):
     if r.status_code == 200:
         soup = bsoup(r.text, 'html.parser')
         pdf = soup.find(id='pdf')
-        url = re.findall(r'.*\.pdf',pdf.get('src'))[0]
-        if(not re.search('https',url)):
-            url = 'https:' + url
+        try:
+            url = re.findall(r'.*\.pdf',pdf.get('src'))[0]
+            if(not re.search('https',url)):
+                url = 'https:' + url
+        except:                                      
+            print('This doi: "{0}" is not found! Please contact SeanMWX(Github).'.format(url.split('/')[-2]+'/'+url.split('/')[-1][:-2]))
+            return 
         download_file(url)
     else:
         print ('errors occur.') 
