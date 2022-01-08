@@ -359,5 +359,25 @@ for nums in nums_list:
     else:
         print('they are not both integer')
 
-# 37.
+# 37. Write a Python program to display your details like name, age, address in three different lines.
+print_color('H', 'E', 'Q37')
+class Person():
+    def __init__(self, name, age, address):
+        self.name = name
+        self.age = age
+        self.address = address
+
+
+p1 = Person('CoCo', 20, 'Earth')
+print('Name: {0}, Age: {1}, Address: {2}.'.format(p1.name, p1.age, p1.address))
+
+# 38. Write a Python program to solve (x + y) * (x + y). 
+print_color('H', 'E', 'Q38')
+num_list = [(1,2),(4,3)]
+for num in num_list:
+    x = num[0]
+    y = num[1]
+    print('(({0}+{1})^2)={2}'.format(x,y,(x+y)**2))
+
+# 39. 
 
