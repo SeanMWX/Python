@@ -1,0 +1,7 @@
+How to use?
+1. Input the pdf file name in file_name
+2. Input the pages you want to separate in pages
+3. Run the run.bat
+
+file_name: [example.pdf]
+pages (starting from 0): [0,2-5,6,9]
