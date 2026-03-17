@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arxiv: cs.AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* 基础重置 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f0f0f2; /* 微妙的灰色背景 */
+            color: #333; /* 深灰色文字，增加对比度但不过分强烈 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 更现代的字体 */
+        }
+
+        /* 主内容区 */
+        .content {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            padding: 20px;
+            min-height: calc(100vh - 60px);
+            line-height: 1.5;
+        }
+
+        /* 内部容器 */
+        .inner-content {
+            max-width: 1200px;
+            width: 100%;
+            background: #fff; /* 白色背景提升内容可读性 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 微妙的阴影增加立体感 */
+            padding: 20px; /* 内容与边缘的距离 */
+            border-radius: 5px; /* 轻微的圆角 */
+        }
+
+        /* 页脚样式 */
+        .site-info {
+            background-color: #f1f1f1; /* 页脚背景色 */
+            color: #333; /* 页脚文字色 */
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover, a:focus {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* 文章容器样式 */
+        .article-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+
+        /* 文章左侧和右侧样式 */
+        .article-left, .article-right {
+            width: 48%;
+        }
+
+        /* 文章标题和摘要样式 */
+        .article-title, .article-summary {
+            margin: 5px 0;
+        }
+
+        /* 增加科技感的标题样式 */
+        h1 {
+            color: #333;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: -1px; /* 字母间距调整 */
+        }
+
+        /* 微调滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .header-info {
+            text-align: center;
+            padding: 20px;
+            background-color: #eef;
+            border-bottom: 1px solid #ddd;
+        }
+        .header-info h1 {
+            margin: 0 0 10px 0;
+        }
+        .header-info p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+<div class="header-info">
+    <pre>
+    _              _                         _    ___ 
+   / \   _ ____  _(_)_   ___    ___ ___     / \  |_ _|
+  / _ \ | '__\ \/ / \ \ / (_)  / __/ __|   / _ \  | | 
+ / ___ \| |   >  <| |\ V / _  | (__\__ \_ / ___ \ | | 
+/_/   \_\_|  /_/\_\_| \_/ (_)  \___|___(_)_/   \_\___|
+    </pre>
+    <h1>Arxiv: cs.AI</h1>
+    <p>今日文章总数: 123</p>
+    <p>更新日期: 2024-03-21</p>
+    <p>预计阅读英文摘要时间: 15分钟</p>
+    <p>预计阅读中文摘要时间: 10分钟</p>
+    <!-- 这里可以添加更多信息 -->
+</div>
+
+<div class="content">
+    <div class="inner-content">
+        <div class="article-container"><div class="article-left"><h3 class="article-title">Title: Videoshop: Localized Semantic Video Editing with Noise-Extrapolated Diffusion Inversion</h3><p class="article-summary">Summary: We introduce Videoshop, a training-free video editing algorithm for localized
+            semantic edits. Videoshop allows users to use any editing software, including
+            Photoshop and generative inpainting, to modify the first frame; it
+            automatically propagates those changes, with semantic, spatial, and temporally
+            consistent motion, to the remaining frames. Unlike existing methods that enable
+            edits only through imprecise textual instructions, Videoshop allows users to
+            add or remove objects, semantically change objects, insert stock photos into
+            videos, etc. with fine-grained control over locations and appearance. We
+            achieve this through image-based video editing by inverting latents with noise
+            extrapolation, from which we generate videos conditioned on the edited image.
+            Videoshop produces higher quality edits against 6 baselines on 2 editing
+            benchmarks using 10 evaluation metrics.</p><p><i>Updated: 2024-03-21 17:59:03</i></p></div>
+                        <div class="article-right"><h3 class="article-title">标题: Videoshop：使用噪声外推扩散反演的本地化语义视频编辑</h3><p class="article-summary">摘要: 我们介绍了Videoshop，这是一种无需训练的用于定位语义编辑的视频编辑算法。Videoshop允许用户使用任何编辑软件，包括Photoshop和生成修补，来修改第一帧；它自动将这些更改传播到其余帧中，并保持语义、空间和时间上的一致性运动。与现有方法只能通过不准确的文本指令进行编辑不同，Videoshop允许用户添加或删除对象，语义性地更改对象，将库存照片插入视频等，对位置和外观进行精细控制。我们通过基于图像的视频编辑实现了这一点，通过噪声外推反演潜在因素，从中生成基于编辑图像条件的视频。Videoshop在两个编辑基准上使用10个评估指标对6个基准线进行了更高质量的编辑。</p>
+                        <p><i>更新时间: 2024-03-21 17:59:03</i></p>
+                        <p><i>领域: cs.CV,cs.AI,cs.LG</i></p>
+                        <p><i>下载: <a href="http://arxiv.org/abs/2403.14617v1" target="_blank">http://arxiv.org/abs/2403.14617v1</a></i></p>
+                        </div>
+                        </div><div class="article-container"><div class="article-left"><h3 class="article-title">Title: Envisioning the Next-Generation AI Coding Assistants: Insights & Proposals</h3><p class="article-summary">Summary: As a research-product hybrid group in AI for Software Engineering (AI4SE), we
+            present four key takeaways from our experience developing in-IDE AI coding
+            assistants. AI coding assistants should set clear expectations for usage,
+            integrate with advanced IDE capabilities and existing extensions, use
+            extendable backend designs, and collect app data responsibly for downstream
+            analyses. We propose open questions and challenges that academia and industry
+            should address to realize the vision of next-generation AI coding assistants.</p><p><i>Updated: 2024-03-21 17:47:28</i></p></div>
+                        <div class="article-right"><h3 class="article-title">标题: 构想下一代AI编程助手：观点与建议</h3><p class="article-summary">摘要: 作为一个在软件工程人工智能领域的研究产品混合团队，我们从开发中的IDE AI编码助手的经验中总结出了四个关键要点。AI编码助手应该设定清晰的使用期望，与先进的IDE功能和现有的扩展集成，使用可扩展的后端设计，并负责地收集应用程序数据以进行下游分析。我们提出了学术界和工业界应该解决的开放问题和挑战，以实现下一代AI编码助手的愿景。</p>
+                        <p><i>更新时间: 2024-03-21 17:47:28</i></p>
+                        <p><i>领域: cs.SE,cs.AI,cs.HC</i></p>
+                        <p><i>下载: <a href="http://arxiv.org/abs/2403.14592v1" target="_blank">http://arxiv.org/abs/2403.14592v1</a></i></p>
+                        </div>
+                        </div>
+    </div>
+</div>
+
+<div class="site-info">
+    Xinhai (Sean) Zou 粤ICP备20040781号. <br/>
+    This website does not contain any JavaScript code. <br/>
+</div>
+
+</body>
+</html>
